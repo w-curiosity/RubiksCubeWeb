@@ -1,0 +1,11 @@
+.terms_cont {
+    width: 80%;
+    max-width: 55rem;
+    margin: 3rem auto 3rem auto;
+}
+
+.terms_cont h1,
+.terms_cont h2,
+.terms_cont h3 {
+    font-family:Arial, Helvetica, sans-serif ;
+}

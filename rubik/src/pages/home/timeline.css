@@ -1,0 +1,140 @@
+.timeline {
+    position: relative;
+    margin: 2rem auto;
+    padding: 15px 0;
+    width: 80%;
+    max-width: 60rem;
+}
+
+.timeline::after {
+    position: absolute;
+    top: 5rem;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 3px;
+
+    background: black;
+    content: '';
+}
+
+.container {
+    padding: 15px 30px;
+    position: relative;
+    width: 50%;
+}
+
+.container.left {
+    left: 0;
+}
+
+.container.right {
+    left: 50%;
+}
+
+.container::after {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: calc(50% - 8px);
+    right: -12px;
+    z-index: 1;
+
+    content: '';
+    background: white;
+    border: 2px solid black;
+    border-radius: 16px;
+}
+
+.container.right::after {
+    left: -12px;
+}
+
+.container .content {
+    position: relative;
+    padding: 2px 10px 0px 20px;
+}
+
+.container.right .content {
+    padding: 2px 20px 0px 10px;
+}
+
+.container .content .date {
+    margin: 0 0 10px 0;
+    font-size: 26px;
+    font-weight: bolder;
+    color: black;
+}
+
+.container.left .content .date {
+    text-align: right;
+}
+
+.container .content p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgb(75, 75, 75);
+}
+
+.container.left .content p {
+    text-align: right;
+}
+
+.continues {
+    font-size: 30px;
+}
+
+/*  Responsive Design */
+/* Mobile: sizing between 0 and 650px width */
+@media (max-width: 650px) {
+
+    /* layout */
+
+    .timeline::after {
+        left: 40px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 10px;
+    }
+
+    .container.right {
+        left: 0%;
+    }
+
+    .container.left::after, 
+    .container.right::after {
+        left: 28px;
+    }
+
+    .container.left .content,
+    .container.right .content {
+        padding: 10px 30px 10px 20px;
+    }
+
+    .container.left .content .date,
+    .container.left .content p {
+        text-align: left;
+    }
+    
+    /* font */
+    .container .content .date {
+        margin: 0 0 5px 0;
+        font-size: 22px;
+        font-weight: bolder;
+    }
+    
+    .container .content p {
+        margin: 0;
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+    .continues {
+        font-size: 22px;
+    }
+    
+}

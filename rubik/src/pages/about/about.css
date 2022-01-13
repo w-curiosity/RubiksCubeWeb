@@ -1,0 +1,39 @@
+.about_cont {
+    width: 80%;
+    max-width: 55rem;
+    margin: 3rem auto 3rem auto;
+}
+
+.about_cont > h1 {
+    text-align: center;
+    font-size: 28px;
+}
+
+.about_cont h1 span {
+    margin-left: 8px;
+}
+
+.about_cont p {
+    line-height: 25px;
+    font-size: 17px;
+}
+
+.about_cont .about_fun {
+    font-weight: bold; 
+    text-align: center;
+}
+
+.about_cont .thankyou {
+    font-weight: bold; 
+    text-align: center;
+}
+
+/*  Responsive Design */
+/* sizing larger than 650px width */
+@media (min-width: 650px) {
+
+    .about_cont > h1{
+        font-size: 32px;
+    }
+    
+}

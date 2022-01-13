@@ -1,0 +1,152 @@
+.records {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 60rem;
+}
+
+/*** records header ***/
+.records h1 {
+    padding: 1rem;
+    border-bottom: 2px solid black;
+    margin-bottom: 0;
+
+    text-align: center;
+    background: linear-gradient(to right, red, blue );
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/*** records content ***/
+
+/** accordion **/
+
+.accordion {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/** accordion title **/
+
+.accordion__title {
+
+    position: relative;
+
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid black;
+
+    font: inherit;
+    font-size: 25px;
+    font-weight: 900;
+    background-color: white;
+
+    text-align: left;
+}
+
+/* table title icon */
+.accordion__title i {
+    font-size: 25px;
+    margin: auto 0.5rem auto 0.5rem;
+}
+
+/* accordion title button icon */
+.accordion__title::after {
+    content: '\2795';
+    font-size: 18px;
+
+    position: absolute;
+    right: 1rem;
+    top:0.8rem;
+}
+
+.accordion__entry--open .accordion__title::after {
+    content: '\2796';
+}
+
+/** accordion body **/
+.accordion__body {
+    display: none;
+    padding: 0.5rem;
+}
+
+.accordion__entry--open .accordion__body {
+display: block;
+}
+
+
+/* table*/
+
+.accordion__body {
+    border-collapse: collapse;
+}
+
+.accordion__body th {
+    font-size: 17px;
+    padding: 8px 2px 8px 2px;
+}
+
+.accordion__body td {
+    padding: 6px 2px 6px 2px;
+}
+
+/* table title */
+.accordion__body .table__header {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* table body */
+.accordion__body tbody {
+    font-size: 14px;
+    text-align: center;
+}
+
+.accordion__body tbody i {
+    margin: auto 0.2rem auto 0.2rem; 
+}
+
+.accordion__body tbody .tbody__single{
+    background-color: rgb(231, 230, 230);
+
+}
+
+.accordion__body tbody .tbody__average{
+    background-color: white;
+}
+
+.accordion__body tbody .type{
+    width: 5%;
+}
+
+.accordion__body tbody .name{
+    width: 20%;
+    color: #9A2F04;
+}
+
+.accordion__body tbody .result{
+    width: 5%;
+}
+
+.accordion__body tbody .country{
+    width: 20%;
+}
+
+.accordion__body tbody .compeition{
+    width: 25%;
+}
+
+.accordion__body tbody .solves{
+    width: 25%;
+}
+
+
+/***  update time ***/
+
+.records .updatetime {
+    text-align: right;
+    padding: 0.5rem;
+    color: #595959;
+    font-size: smaller;
+    margin-bottom: 5rem;
+}

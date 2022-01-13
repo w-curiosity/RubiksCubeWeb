@@ -1,0 +1,210 @@
+.sol_nav {
+    width: 80%;
+    max-width: 55rem;
+    margin: 3rem auto 3rem auto;
+}
+
+.sol_nav .sol_title {
+    text-align: center;
+}
+
+/* solution content > solution group > solution entry */
+
+.sol_nav .sol_grp {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+}
+
+/* solution entry overall basic layout */
+
+.sol_nav .sol_entry {
+    grid-column: span 12;
+    background-color: white;
+    border-radius: 0.8rem;
+
+    width: 100%;
+    height: 240px;
+
+    position: relative;
+    overflow: hidden; 
+}
+
+
+.sol_nav .sol_entry_img {
+    width: 100%;
+    height: auto;
+
+    opacity:0.6;
+    position: absolute;
+}
+
+.sol_nav .sol_entry_btn{
+    position: absolute;
+	left: 50%;
+	top: 80%;
+	transform: translate(-50%,-50%);
+
+    cursor: pointer;
+
+    background-color: white;
+    
+    border-radius: 1rem;
+    border-width: 0.15rem;
+    border-color: rgb(0, 49, 153);
+}
+
+.sol_nav .sol_entry_btn a{
+    padding: 0.7rem 0.6rem 0.7rem 0.6rem ;
+    text-decoration: none;
+    color: rgb(0, 49, 153);
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.sol_nav .sol_entry_btn--hidden{
+    display: none;
+}
+
+.sol_entry .sol_entry_text {
+    position: absolute;
+	margin: auto;
+	top: 35%;
+	left: 0;
+	right: 0;
+    
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.sol_entry .sol_entry_p {
+    position: absolute;
+	margin: auto;
+	top: 25%;
+	left: 0;
+	right: 0;
+    
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* operation */
+
+.sol_nav .sol_entry:hover .sol_entry_img{
+    opacity:1;
+}
+
+.sol_nav .sol_entry:hover .sol_entry_text{
+    display: none;
+}
+
+.sol_nav .sol_entry:hover .sol_entry_btn{
+    display: block;
+}
+
+.sol_nav .sol_entry_btn:hover{
+    background-color: rgb(0, 49, 153);
+}
+
+.sol_nav .sol_entry_btn:hover a{
+    color: white;
+}
+
+/* seperate layout */
+
+/* edge */
+.sol_nav #sol_edge .sol_entry_img {
+    transform: scale(4);
+    top: 15%;
+	left: 4%;
+	right: 0;
+}
+
+/* 2x2x2 cube */
+.sol_nav #sol_2xcube .sol_entry_img {
+    transform: scale(2.8);
+    top: 14%;
+	left: 4%;
+	right: 0;
+}
+
+/* 3x3x3 cube */
+.sol_nav #sol_3xcube .sol_entry_img {
+    transform: scale(2.5);
+    top: 18%;
+	left: 4%;
+	right: 0;
+}
+
+/* 4x4x4 cube */
+.sol_nav #sol_4xcube .sol_entry_img {
+    transform: scale(2.6);
+    top: 12%;
+	left: 4%;
+	right: 0;
+}
+
+/* 5x5x5 cube */
+.sol_nav #sol_5xcube .sol_entry_img {
+    transform: scale(2.6);
+    top: 15%;
+	left: 4%;
+	right: 0;
+}
+
+
+/*  Responsive Design */
+/* default sizing (mobile design) is between 360px and 650px width */
+
+/* sizing larger than 650px width */
+@media (min-width: 650px) {
+
+    .sol_nav .sol_entry {
+        grid-column: span 4;
+    }
+
+    .sol_nav .sol_entry {
+        height: 180px;
+    }
+
+    .sol_entry .sol_entry_text,
+    .sol_entry .sol_entry_p {
+        font-size: 22px;
+    }
+
+}
+
+/* Desktop: sizing larger than 750px width */
+@media (min-width: 750px) {
+    
+    .sol_nav .sol_entry {
+        grid-column: span 4;
+    }
+    
+    .sol_nav .sol_entry {
+        height: 200px;
+    }
+
+    .sol_entry .sol_entry_text {
+        font-size: 32px;
+    }
+
+    .sol_entry .sol_entry_p  {
+        font-size: 27px;
+    }
+
+}
+
+/* Desktop: sizing larger than 900px width */
+@media (min-width: 900px) {
+
+    .sol_nav .sol_entry {
+        height: 260px;
+    }
+
+}

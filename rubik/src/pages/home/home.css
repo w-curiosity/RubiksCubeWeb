@@ -1,0 +1,13 @@
+.home-img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.gallerycontent {
+    grid-column: span 4;
+}

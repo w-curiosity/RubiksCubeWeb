@@ -1,0 +1,108 @@
+/* form */
+
+.localrecord-form {
+    margin-top: 2rem;
+    text-align: left;
+    margin: 0rem 15% auto 15%;
+}
+
+.localrecord-form h2 {
+    text-align: center;
+}
+
+.localrecord-form form {
+    margin-left: 5%;
+}
+
+.localrecord-form .required_label {
+    color: #EB0000;
+}
+
+.localrecord-form input,
+.localrecord-form .typeform select,
+.localrecord-form .submit_btn button {
+    width: 90%;
+    margin: 0.3rem 0.5rem 0.3rem 0;
+}
+
+.localrecord-form .agreeform input {
+    width: auto;
+    margin: 0.3rem 0.5rem 0.3rem 0;
+}
+
+.fastest_input,
+.average_input {
+    caret-color: transparent;
+    cursor: default;
+    filter: grayscale(100%);
+    background-color: rgb(243, 243, 243);
+    border: 1px rgb(179, 179, 179) solid;
+    color: gray;
+}
+
+
+/* divider */
+.form-divider {
+    border-bottom: 1px grey dashed;
+}
+
+
+/* local record table */
+
+.siterecord {
+    margin: auto 5% 2rem 5%;
+    text-align: center;
+}
+
+.siterecord-table ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.siterecord-table-title {
+    border-bottom: 1px grey solid;
+    font-weight: bold;
+}
+
+.siterecord-table li{
+    margin: 0.3rem;
+}
+
+.siterecord-table-name,
+.siterecord-table-type,
+.siterecord-table-fastest,
+.siterecord-table-avg {
+    display: inline-block;
+    width: 25%;
+}
+
+.siterecord span {
+    font-size: 14px;
+}
+
+
+/*  Responsive Design */
+/* default sizing (mobile design) is between 360px and 750px width */
+
+/* Desktop: sizing larger than 750px width */
+@media (min-width: 750px) {
+
+    .localrecord-form {
+        margin-top: 2rem;
+        text-align: left;
+        margin: 0rem 30% auto 30%;
+    }
+
+    .siterecord {
+        margin: auto 10% 2rem 10%;
+        text-align: center;
+    }
+
+    .siterecord span {
+        font-size: 16px;
+    }
+    
+}

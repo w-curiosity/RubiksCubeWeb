@@ -1,0 +1,265 @@
+.navigation {    
+    margin-left: 5%;
+    margin-right: 0%;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+        "logo menubar";
+
+    z-index: 9999;
+}
+
+/* header logo */
+
+header .logo{
+    grid-area: logo;
+    margin: auto 0rem auto 0rem;
+}
+
+header .logo img {
+    width: 5rem;
+    height: auto;
+    margin: auto 0rem auto 0rem;
+}
+
+/* header menubar */
+
+header .menubar {
+    grid-area: menubar;
+    margin: auto auto auto 5%;
+    height: auto;
+    width: 100%;
+}
+
+header .menubar > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+    list-style-type: none;
+}
+
+header .menu > li:hover {
+    background-color: black;
+}
+
+header .menu a{
+    border: 0;
+    height: auto;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    margin: auto;
+    padding: 0.6rem 15rem 0.4rem 0rem;
+}
+
+header .menu a:hover {
+    background-color: black;
+    color: white;
+}
+
+header .menu .menu_section{
+    display: inline-block;
+    padding-top: 0.7rem;
+    padding-bottom: 0.6rem;
+
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header .menu .menu_section--open{
+    text-decoration: underline black 2px;
+    text-underline-offset: 3px;
+}
+
+
+/* header menubar submenu */
+
+header .submenu {
+
+    position: absolute;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+    display: grid;
+    flex-direction: row;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "submenulist submenuimg";
+
+    background-color:black;
+    transition: max-height 1.1s;
+
+    box-shadow: 0px 13px 31px -5px #000000;
+}
+
+header .submenu .submenu-img {
+    grid-area: submenuimg;
+    width: 10rem;
+    margin: auto auto auto 0rem;
+}
+
+header .submenu .submenu-list {
+    grid-area: submenulist;
+    margin: 1.5rem;
+    list-style-type: none;
+}
+
+header .submenu .submenu-list li{
+    margin: 0.3rem;
+}
+
+header .submenu .submenu-list a {
+    margin: 0.1rem;
+    display: inline-block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    padding: 0;
+}
+
+header .menu > li:hover > a{
+    color: white;
+}
+
+/* submenu underline animation */
+header .submenu-list>li>i {
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 4.6rem;
+
+    background-color: white;
+    content: "";
+}
+
+header .submenu-list>li:hover i{
+    animation: underlineslide 1s alternate;
+    animation-fill-mode:forwards;
+    animation-play-state: running;
+}
+
+@keyframes underlineslide {
+	from { width:0rem; }
+	to { width:10rem; }
+}
+
+/* menu focus */
+header .menu > a:focus-within .submenu,
+header .menu > li:hover .submenu,
+header .menu > li:focus-within .submenu {
+    max-height: 35vh;
+    visibility: visible;
+}
+
+
+/*  Responsive Design */
+/* default sizing (mobile design) is between 360px and 600px width */
+
+/* desktop design */
+/* sizing between 650px and 800px width */
+@media (min-width: 650px) {
+
+    .navigation {    
+        margin-left: 7%;
+        margin-right: 10%;
+        grid-template-areas: 
+            "logo menubar";
+    }
+
+    header .menubar {
+        margin-left: 15%;
+        height: 100%;
+        width: auto;
+    }
+
+    header .logo{
+        margin: 0.5rem 0rem 0.5rem 0rem;
+    }
+    
+    header .logo img {
+        width: 7.8rem;
+    }
+
+    header .menubar > ul {
+        flex-direction: row;
+    }
+
+    header .menu a{
+        font-size: 16px;
+        padding: 1rem;
+        padding-bottom: 1.2rem;
+    }
+
+    header .menu .menu_section{
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    /* header menubar submenu */
+
+    header .submenu .submenu-img {
+        width: 20rem;
+        margin: auto auto auto 3rem;
+    }
+    
+    header .submenu .submenu-list {
+        margin: 2rem;
+    }
+
+    /* submenu underline animation */
+    @keyframes underlineslide {
+        from { width:0rem; }
+        to { width:15rem; }
+    }
+}
+
+/* sizing between 750px and 850px width */
+
+@media (min-width: 750px) {
+
+    header .menubar {
+        margin-left: 18%;
+    }
+
+    header .menu a{
+        font-size: 17px;
+        padding: 1.2rem;
+    }
+}
+
+/* sizing between 850px and 950px width */
+@media (min-width: 850px) {
+
+    header .menubar {
+        margin-left: 20%;
+    }
+
+    header .menu a{
+        font-size: 18px;
+        padding: 1.5rem;
+        padding-bottom: 1.2rem;
+    }
+
+}
+
+/* sizing between 950px and 1024px width */
+@media (min-width: 950px) {
+    header .menubar {
+        margin-left: 30%;
+    }
+}
+
+/* sizing over 1024px width */
+@media (min-width: 1024px) {
+    header .menubar {
+        margin-left: 40%;
+    }
+}

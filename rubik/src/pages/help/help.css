@@ -1,0 +1,82 @@
+.help_cont {
+    width: 80%;
+    max-width: 55rem;
+    margin: 3rem auto 3rem auto;
+}
+
+.help_cont > h1{
+    font-size: 28px;
+}
+
+.help_tabs { 
+    display: flex;
+    flex-direction: row;
+    margin: 2rem auto;
+}
+  
+.help_tabs .tabs__entry {
+    width: 100%;
+    margin:0px -2px 0px 0px ;
+    border-left: 2px solid rgb(146, 146, 146);
+    border-right: 2px solid rgb(146, 146, 146);
+}
+
+.help_tabs .tabs__title {
+    position: relative;
+    width: 100%;
+    padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+    border: none;
+
+    cursor: pointer;
+    font: inherit;
+    background-color:white;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.help_tabs .tabs__body { 
+    display: none;
+    position:absolute;
+
+    max-width: 55rem;
+    width: 80%;
+    margin: 0rem auto 0rem auto;
+    left: 10%;
+    right: 10%;
+    padding: 2rem;
+    z-index: -1;
+
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.help_tabs .tabs__entry--open .tabs__title { 
+    text-decoration: underline 2.5px grey;
+    text-underline-offset: 4px;
+
+} 
+
+.help_tabs .tabs__entry--open .tabs__body { 
+    display: block;
+} 
+
+
+/*  Responsive Design */
+/* Desktop: sizing larger than 650px width */
+@media (min-width: 650px) {
+
+    .help_cont > h1{
+        font-size: 32px;
+    }
+
+    .help_tabs .tabs__title {
+        padding: 0.8rem 1rem 0.8rem 1rem;
+        font-size: larger;
+    }
+
+    .help_tabs .tabs__body { 
+        font-size: 18px;
+    }
+
+}

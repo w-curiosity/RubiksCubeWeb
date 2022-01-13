@@ -1,0 +1,140 @@
+.stopwatch{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 60rem;
+    font-family: sans-serif;
+}
+
+
+/*** timer ***/
+
+.timer{
+    margin : 3rem 0;
+    width: 100%;
+    display: flex;
+    height: 12%;
+    justify-content: center;
+    align-items: center;
+}
+  
+.digits{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 7rem;
+    color:  darkblue;
+}
+
+/*** Control-Buttons ***/
+
+.control-btns{
+    margin: auto;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-group {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn {
+    display: flex;
+    margin: 0rem 20px;
+
+    width: 8rem;
+    height: 2rem;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+    font-size: large;
+    color: black;
+}
+
+.clear-btn i {
+    font-size: smaller;
+    margin-right: 0.4rem;
+}
+
+.clear-btn:disabled {
+    opacity: 0.5;
+}
+
+.btn-dir {
+    margin: 1rem auto 1rem auto;
+    font-size: 14px;
+    width: fit-content;
+    text-align: center;
+}
+
+.btn-dir .highlight{
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+/* loading indicator */
+
+.btn #loading {
+    animation: loading-circle 1.8s ease-in-out infinite;
+}
+
+@keyframes loading-circle {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+/*** CurrRecords ***/
+
+.currRecords {
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px grey dashed;
+}
+
+.record__content {
+    width: 60%;
+    margin: 0rem auto 0.5rem auto;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    border: 1px solid rgb(71, 43, 43);
+
+    font-weight: bold;
+}
+
+.record__digits {
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.record__col {
+    grid-column: span 2;
+}
+
+.record__index {
+    background-color: rgb(226, 225, 225);
+    padding: 0.1rem;
+}
+
+.record__time {
+    padding: 0.1rem;
+}
+
+
+.record__fastest {
+    color:#EB0000;
+}
