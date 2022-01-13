@@ -1,5 +1,8 @@
 # README
 
+A web for Rubik's Cube. Incuding introduction, solution guide, stopwatch and so on.
+React.js, Node.js
+
 ## How to Run
 + `npm install`
 + `npm start`
